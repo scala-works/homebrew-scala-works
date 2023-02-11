@@ -1,5 +1,5 @@
 class ScalaWorks < Formula
-  desc "command line utility to help with scala-works resources"
+  desc "Command-line utility to help with scala-works resources"
   homepage "https://github.com/scala-works/scala-works-cli"
   url "https://github.com/scala-works/scala-works-cli/archive/refs/tags/v0.0.1.tar.gz"
   sha256 "8cd2dddb0d2f36397ec99b83c5922df5acbbf7c2e593ef379660556520fb283a"
