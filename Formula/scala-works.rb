@@ -11,10 +11,10 @@ class ScalaWorks < Formula
   end
 
   def install
-    resource("scala-cli").stage {
-      system "chmod", "+x", "scala-cli" 
-      bin.install "scala-cli" 
-    }
+    resource("scala-cli").stage do
+      chmod "+x", "scala-cli"
+      bin.install "scala-cli"
+    end
     system bin/"scala-cli", "package", ".", "-o", "sw"
     bin.install "sw"
   end
