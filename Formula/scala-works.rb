@@ -6,8 +6,9 @@ class ScalaWorks < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/scala-works/homebrew-scala-works/releases/download/scala-works-0.0.1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "7053ff82e98df5a98aa19879ba6ff7d35a6e6fdba020a876c47582c26fd5153e"
+    root_url "https://github.com/scala-works/homebrew-scala-works/releases/download/scala-works-0.0.2"
+    sha256 cellar: :any_skip_relocation, monterey:     "486cb3974c142c7971783212b1c1a41c3899dd19cbe721006874544b7dfa4e4c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "753e0b893a40b0fb225d476148557a44f0dcb8a3f3ee338c508eb08ceafdf10a"
   end
 
   depends_on "openjdk" => :build
