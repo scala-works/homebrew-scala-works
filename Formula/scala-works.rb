@@ -11,7 +11,6 @@ class ScalaWorks < Formula
   end
 
   def install
-    Language::Java.java_home("11")
     resource("scala-cli").stage do
       chmod "+x", "scala-cli"
       buildpath.install "scala-cli"
@@ -21,7 +20,7 @@ class ScalaWorks < Formula
   end
 
   test do
-    Language::Java.java_home("11")
+    ENV["JAVA_HOME"] = Language::Java.java_home("11")
     system bin/"sw"
   end
 end
