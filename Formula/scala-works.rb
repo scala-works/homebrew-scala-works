@@ -13,9 +13,9 @@ class ScalaWorks < Formula
   def install
     resource("scala-cli").stage do
       chmod "+x", "scala-cli"
-      bin.install "scala-cli"
+      buildpath.install "scala-cli"
     end
-    system bin/"scala-cli", "package", ".", "-o", "sw"
+    system buildpath/"scala-cli", "package", ".", "-o", "sw", "--jvm", "11"
     bin.install "sw"
   end
 
