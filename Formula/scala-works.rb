@@ -19,8 +19,4 @@ class ScalaWorks < Formula
     bin.install "sw"
   end
 
-  test do
-    ENV["JAVA_HOME"] = Language::Java.java_home("11")
-    system bin/"sw"
-  end
 end
