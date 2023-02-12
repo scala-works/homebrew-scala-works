@@ -18,5 +18,4 @@ class ScalaWorks < Formula
     system buildpath/"scala-cli", "package", ".", "-o", "sw", "--jvm", "11"
     bin.install "sw"
   end
-
 end
