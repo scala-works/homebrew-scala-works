@@ -5,6 +5,11 @@ class ScalaWorks < Formula
   sha256 "8cd2dddb0d2f36397ec99b83c5922df5acbbf7c2e593ef379660556520fb283a"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/scala-works/homebrew-scala-works/releases/download/scala-works-0.0.1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7053ff82e98df5a98aa19879ba6ff7d35a6e6fdba020a876c47582c26fd5153e"
+  end
+
   depends_on "openjdk" => :build
 
   resource "scala-cli" do
