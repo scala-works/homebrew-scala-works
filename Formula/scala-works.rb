@@ -5,7 +5,7 @@ class ScalaWorks < Formula
   sha256 "8cd2dddb0d2f36397ec99b83c5922df5acbbf7c2e593ef379660556520fb283a"
   license "Apache-2.0"
 
-  depends_on "openjdk@11" => :build
+  depends_on "openjdk" => :build
 
   resource "scala-cli" do
     url "https://github.com/VirtusLab/scala-cli/releases/download/v0.1.20/scala-cli"
@@ -13,17 +13,24 @@ class ScalaWorks < Formula
   end
 
   def install
-    ENV["JAVA_HOME"] = Formula["openjdk@11"].opt_prefix
+    ENV["JAVA_HOME"] = Formula["openjdk"].opt_prefix
     resource("scala-cli").stage do
       chmod "+x", "scala-cli"
       buildpath.install "scala-cli"
     end
-    system buildpath/"scala-cli", "package", ".", "-o", "sw"
+    system buildpath/"scala-cli", "package", ".", "-o", "sw", "--jvm", "11"
     bin.install "sw"
   end
 
+  def caveats
+    <<~EOS
+      This application is packages with scala-cli. It will pick up JAVA_HOME
+      which needs to be at least 11.
+    EOS
+  end
+
   test do
-    ENV["JAVA_HOME"] = Formula["openjdk@11"].opt_prefix
+    ENV["JAVA_HOME"] = Formula["openjdk"].opt_prefix
     system bin/"sw"
   end
 end
