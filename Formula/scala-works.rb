@@ -1,8 +1,8 @@
 class ScalaWorks < Formula
   desc "Command-line utility to help with scala-works resources"
   homepage "https://github.com/scala-works/scala-works-cli"
-  url "https://github.com/scala-works/scala-works-cli/releases/download/v0.0.1/scala-works-cli-v0.0.1-ubuntu-latest.tar.gz"
-  sha256 "cf4c946018eec75a5d39ea0bd9e2658120d76e59424879bea1c179c2d2a3136e"
+  url "https://github.com/scala-works/scala-works-cli/releases/download/v0.0.2/scala-works-cli-v0.0.2-ubuntu-latest.tar.gz"
+  sha256 "0187078b3613ceb5b62c94bc77d3b650d1b6608082ffdbeece02ca143a88b26c"
   license "Apache-2.0"
 
   def install
